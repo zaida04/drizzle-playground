@@ -4,7 +4,8 @@
   "scripts": {
     "playground": "tsx src/playground.ts",
     "generate-migrations": "drizzle-kit generate:pg --schema=./src/schema.ts",
-    "run-migrations": "tsx src/run-migrations.ts"
+    "run-migrations": "tsx src/run-migrations.ts",
+    "example-database": "docker run -d --name postgres-container -p 5432:5432 -e POSTGRES_PASSWORD=password postgres"
   },
   "devDependencies": {
     "drizzle-kit": "0.19.13",
