@@ -7,7 +7,7 @@ import postgres from "postgres";
 // the first two will likely be the default postgres info
 // the last one, you should create a database using pgadmin and substitute the name in the url
 const sql_connection = postgres(
-  "postgresql://username:password@localhost:5432/database_name",
+  "postgresql://postgres:password@localhost:5432/postgres",
   { max: 1 }
 );
 // this creates the drizzle utility so we can run queries

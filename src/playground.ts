@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm";
-import { drizzle_client } from "./client";
+import { drizzle_client, sql_connection } from "./client";
 import { users } from "./schema";
 
 async function main() {
@@ -43,6 +43,8 @@ async function main() {
     })
     // make another where condition
     .where(eq(users.id, 1));
+
+  await sql_connection.end();
 }
 
 main();
