@@ -2,6 +2,7 @@
   "name": "drizzle-playground",
   "version": "0.0.1",
   "scripts": {
+    "playground": "tsx src/playground.ts",
     "generate-migrations": "drizzle-kit generate:pg --schema=./src/schema.ts",
     "run-migrations": "tsx src/run-migrations.ts"
   },
