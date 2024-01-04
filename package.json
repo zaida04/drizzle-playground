@@ -1,0 +1,16 @@
+{
+  "name": "drizzle-playground",
+  "version": "0.0.1",
+  "scripts": {
+    "generate-migrations": "drizzle-kit generate:pg --schema=./src/schema.ts",
+    "run-migrations": "tsx src/run-migrations.ts"
+  },
+  "devDependencies": {
+    "drizzle-kit": "0.19.13",
+    "tsx": "^4.7.0"
+  },
+  "dependencies": {
+    "drizzle-orm": "0.28.5",
+    "postgres": "^3.4.3"
+  }
+}
