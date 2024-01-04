@@ -3,7 +3,13 @@ import postgres from "postgres";
 
 // this connects us to the postgres db. it's our raw connection
 // your database url should go as the first string parameter
-const sql_connection = postgres("...", { max: 1 });
+// make sure you replace things like username, password, and database_name
+// the first two will likely be the default postgres info
+// the last one, you should create a database using pgadmin and substitute the name in the url
+const sql_connection = postgres(
+  "postgresql://username:password@localhost:5432/database_name",
+  { max: 1 }
+);
 // this creates the drizzle utility so we can run queries
 const drizzle_client = drizzle(sql_connection);
 
