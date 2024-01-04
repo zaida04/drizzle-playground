@@ -11,3 +11,11 @@ Under `src/schema.ts` that's where we define things like our tables. Whenever an
 Under `src/run-migrations.ts` that's where we run our migrations. This doesn't run every time we run our application, we run it manually indepdently from (before) running our application to make sure the tables are ready beforehand. We run this using `npm run run-migrations`. That just runs this exact file.
 
 Under `src/playground.ts` you have fun using drizzle.
+
+## Command Order
+
+This is usually the order you should run the commands. The first two only need to be run once every time you **change the tables in any way**. The last one is ran every time you want to test your changes
+
+- `npm run generate-migrations`
+- `npm run run-migrations`
+- `npm run playground`
