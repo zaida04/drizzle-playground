@@ -12,6 +12,13 @@ Under `src/run-migrations.ts` that's where we run our migrations. This doesn't r
 
 Under `src/playground.ts` you have fun using drizzle.
 
+## File Order
+
+- `src/client.ts`
+- `src/schema.ts`
+- `src/run-migrations.ts`
+- `src/playground.ts`
+
 ## Command Order
 
 This is usually the order you should run the commands. The first two only need to be run once every time you **change the tables in any way**. The last one is ran every time you want to test your changes
